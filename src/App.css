@@ -1,0 +1,101 @@
+/* App.css */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.capture-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.video {
+  width: 100%;
+  max-width: 600px;
+}
+
+.canvas {
+  display: none; /* Hide the canvas element by default */
+}
+
+.capture-button,
+.stop-capture-button,
+.start-capture-button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.capture-button:hover,
+.stop-capture-button:hover,
+.start-capture-button:hover {
+  background-color: #45a049;
+}
+
+.face-data-container,
+.no-face-data-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+h2 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.face-list,
+.no-face-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.face-item,
+.no-face-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.face-image,
+.no-face-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.face-details {
+  text-align: center;
+}
+
+.no-face-item p {
+  margin-top: 0;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 600px) {
+  .face-list,
+  .no-face-list {
+    grid-template-columns: 1fr;
+  }
+
+  .video {
+    max-width: 100%;
+  }
+}
